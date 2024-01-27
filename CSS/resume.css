@@ -1,0 +1,132 @@
+.Myresume{
+  border: 1px solid black;
+  height: 100%;
+}
+.MyName h1{
+  text-align: center;
+  margin-bottom: 2%;
+}
+.Left{
+  text-align: end;
+}
+
+p , hr{ 
+  margin:0 
+}
+h4{
+  margin-top: 2%;
+}
+/* 
+ .Btn{
+  position: absolute;
+  position: fixed;
+  left: 90%;
+  top: 85vh;
+ } */
+
+ /* ----------------------------------------------------------- */
+
+ .Btn {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* position: relative; */
+  transition-duration: 0.3s;
+  position: absolute;
+  position: fixed;
+  left: 90%;
+  top: 85vh;
+}
+
+.svgIcon {
+  fill: #2196f3;
+}
+
+.icon2 {
+  width: 18px;
+  height: 5px;
+  border-bottom: 2px solid #2196f3;
+  border-left: 2px solid #2196f3;
+  border-right: 2px solid #2196f3;
+}
+
+.tooltip {
+  position: absolute;
+  top: -50px;
+  opacity: 0;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgb(12, 12, 12);
+  background-size: 1000%;
+  background-position: center;
+  transform: rotate(45deg);
+  bottom: -5%;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .tooltip {
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  background-color: #01579b;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .icon2 {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.Btn:hover .svgIcon {
+  fill: white;
+  animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+ 
+ /* ----------------------------------------------------------- */
+@media (min-width:0px) and (max-width:425px){
+  .Left{
+    text-align:start;
+  }
+  .Btn{
+    left: 85%;
+  }
+}

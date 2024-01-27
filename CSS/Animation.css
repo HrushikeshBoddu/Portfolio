@@ -1,0 +1,1260 @@
+/* loading start */
+/* loading end */
+
+
+/* nav bar icon start */
+.hamburger {
+  height: 50px;
+  width: 50px;
+  transform: 0.2s;
+  position: relative;
+}
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.line {
+  transition: 0.5s;
+  stroke-width: 6px;
+  stroke: white;
+}
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+.hamburger .checkbox:checked + svg .line {
+  stroke: #ffcc53;
+}
+.hamburger .checkbox:checked + svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+.hamburger .checkbox:checked + svg .lineMid {
+  stroke-dashoffset: 40;
+}
+.hamburger .checkbox:checked + svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+/* nav bar icon end */
+
+/* Hire Me Start */
+.reward-btn {
+  width: 120px;
+  height: 35px;
+  background-color: #ffe956;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.IconContainer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.IconContainer svg {
+  width: 40%;
+  z-index: 3;
+}
+
+.box-top {
+  transition: all 0.3s;
+}
+
+.textes {
+  width: 70px;
+  height: 100%;
+  font-size: 13px;
+  color: #ffe956;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+
+.reward-btn:hover .IconContainer .box-top {
+  transform: translateY(-5px);
+}
+
+/* .reward-btn:hover {
+  background-color: #ffe956;
+} */
+.reward-btn:hover .coin {
+  transform: translateY(-5px);
+  transition-delay: 0.2s;
+}
+
+.coin {
+  width: 25%;
+  height: 25%;
+  background-color: #ffe956;
+
+  ;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.3s;
+  z-index: 1;
+  border: 2px solid orange;
+  margin-top: 4px;
+}
+
+/* Hire Me end */
+
+/* Download CV Start */
+.button {
+  --width: 110px;
+  --height: 45px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #ffcc53;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button::after,
+.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.texts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,
+.texts,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #122620;
+}
+
+.texts {
+  top: 0
+}
+
+.texts,
+.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #122620;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.button:hover {
+  background: #ffcc53;
+}
+
+.button:hover .texts {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/* Download CV End */
+
+/* Arrow Down Animation Start  */
+.ico {
+  margin: 0 auto;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: url("#goo");
+}
+
+.ico .circle {
+  background: #ffcc53;
+  border-radius: 50%;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transform-origin: 0%;
+}
+
+.ico .circle.circle-top {
+  height: 33.3333333333px;
+  width: 41.6666666667px;
+  -webkit-animation: blob-1-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: blob-1-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  z-index: 0;
+  top: 0;
+}
+
+.ico .circle.circle-bottom {
+  height: 33.3333333333px;
+  width: 41.6666666667px;
+  -webkit-animation: blob-2-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: blob-2-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  z-index: 9;
+  bottom: 0px;
+}
+
+.ico .st-arrow {
+  fill: #122620;
+  -webkit-animation: scrolly 3s cubic-bezier(0.77, 0, 0.175, 1) forwards infinite;
+  animation: scrolly 3s cubic-bezier(0.77, 0, 0.175, 1) forwards infinite;
+  perspective: 9000px;
+  transform: translateZ(0);
+  transform-origin: bottom;
+}
+
+.svg {
+  z-index: 9;
+  position: relative;
+}
+
+@-webkit-keyframes blob-1-anim {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  14% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  24% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes blob-1-anim {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  14% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  24% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@-webkit-keyframes blob-2-anim {
+  0% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+
+  30% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+
+  70% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+
+  95% {
+    transform: scale(1) translate(-50%, 26px);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+}
+
+@keyframes blob-2-anim {
+  0% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+
+  30% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+
+  70% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+
+  95% {
+    transform: scale(1) translate(-50%, 26px);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+}
+
+@-webkit-keyframes scrolly {
+  0% {
+    transform: translate3d(0, -150%, 0) rotateX(90deg) scale(0.5) skewX(3deg);
+  }
+
+  30% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+
+  70% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+
+  95% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+
+  100% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+}
+
+@keyframes scrolly {
+  0% {
+    transform: translate3d(0, -150%, 0) rotateX(90deg) scale(0.5) skewX(3deg);
+  }
+
+  30% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+
+  70% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+
+  95% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+
+  100% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+}
+
+/* Arrow Down Animation End  */
+
+
+/* leran more arrow animation start */
+.the-arrow {
+  width: 1px;
+  transition: all 0.2s;
+}
+
+.the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+
+.the-arrow.-left>.shaft {
+  width: 0;
+  background-color: #ffcc53;
+}
+
+.the-arrow.-left>.shaft:before,
+.the-arrow.-left>.shaft:after {
+  width: 0;
+  background-color: #ffcc53;
+}
+
+.the-arrow.-left>.shaft:before {
+  transform: rotate(0);
+}
+
+.the-arrow.-left>.shaft:after {
+  transform: rotate(0);
+}
+
+.the-arrow.-right {
+  top: 3px;
+}
+
+.the-arrow.-right>.shaft {
+  width: 1px;
+  transition-delay: 0.2s;
+}
+
+.the-arrow.-right>.shaft:before,
+.the-arrow.-right>.shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+
+.the-arrow.-right>.shaft:before {
+  transform: rotate(40deg);
+}
+
+.the-arrow.-right>.shaft:after {
+  transform: rotate(-40deg);
+}
+
+.the-arrow>.shaft {
+  background-color: #ffcc53;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+
+.the-arrow>.shaft:before,
+.the-arrow>.shaft:after {
+  background-color: #ffcc53;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+
+.the-arrow>.shaft:before {
+  transform-origin: top right;
+}
+
+.the-arrow>.shaft:after {
+  transform-origin: bottom right;
+}
+
+.animated-arrow {
+  display: inline-block;
+  color: #ffcc53;
+  font-size: 1.25em;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.animated-arrow:hover {
+  color: #ffcc53;
+}
+
+.animated-arrow:hover>.the-arrow.-left>.shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #ffcc53;
+}
+
+.animated-arrow:hover>.the-arrow.-left>.shaft:before,
+.animated-arrow:hover>.the-arrow.-left>.shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #ffcc53;
+}
+
+.animated-arrow:hover>.the-arrow.-left>.shaft:before {
+  transform: rotate(40deg);
+}
+
+.animated-arrow:hover>.the-arrow.-left>.shaft:after {
+  transform: rotate(-40deg);
+}
+
+.animated-arrow:hover>.main {
+  transform: translateX(17px);
+  transform: translateX(80px);
+}
+
+.animated-arrow:hover>.main>.the-arrow.-right>.shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+
+.animated-arrow:hover>.main>.the-arrow.-right>.shaft:before,
+.animated-arrow:hover>.main>.the-arrow.-right>.shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+
+.animated-arrow:hover>.main>.the-arrow.-right>.shaft:before {
+  transform: rotate(0);
+}
+
+.animated-arrow:hover>.main>.the-arrow.-right>.shaft:after {
+  transform: rotate(0);
+}
+
+.animated-arrow>.main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.animated-arrow>.main>.text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+
+.animated-arrow>.main>.the-arrow {
+  position: relative;
+}
+
+/* leran more arrow animation end */
+
+/* Skills carousel slide Home Page Start Start  */
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  /* background: white; */
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+  /* height: 400px; */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before, .slider::after {
+  /* background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100%;
+  width: 250px;
+}
+/* Skills carousel slide Home Page Start End */
+
+
+/* MySkills Card  Home Page Start */
+.e-card {
+  /* margin: 100px auto; */
+  background: transparent;
+  box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+  position: relative;
+  /* width: 240px; */
+  width: 80%;
+  height: 330px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg, #2f4740, #465b55 60%, #2f4740);
+}
+
+.icones {
+  width: 3em;
+  margin-top: -1em;
+  padding-bottom: 1em;
+}
+
+.infotop {
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  top: 5.6em;
+  left: 0;
+  right: 0;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 3000ms infinite linear;
+}
+
+.wave {
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 4000ms;
+}
+
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* MySkills Card Home Page End */
+
+/* project at index page end */
+.card-containers {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card-containers::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.cards .img-contents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% ); */
+  transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+
+
+
+.cards .contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  color: #e8e8e8;
+  padding: 15px;
+  line-height: 1.5;
+  border-radius: 5px;
+  opacity: 0;
+  /* pointer-events: none; */
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.cards .contents .heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.cards:hover .contents {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cards:hover .img-contents {
+  scale: 2.5;
+  rotate: 30deg;
+  filter: blur(7px);
+}
+
+.cards:hover .img-contents svg {
+  fill: transparent;
+}
+
+.btns {
+  display: flex;
+}
+
+.card__buttons {
+  padding: 5px;
+  border-radius: 8px;
+  background: #122620;
+  border: none;
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  color: #ffcc53;
+  border: 1px solid #122620;
+}
+
+
+/* project at index page end */
+
+/* --------------- About Page --------------------------- */
+
+
+/* skills About Page Start */
+@keyframes progress {
+  0% { --percentage: 0; }
+  100% { --percentage: var(--value); }
+}
+
+@property --percentage {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: #ffcc53;
+  --secondary: #fff;
+  --size: 80%;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+  mask: radial-gradient(white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--primary);
+}
+
+/* skills About Page End */
+
+
+/*  Certifications About Page Start */
+.ag-format-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.ag-courses_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  padding: 50px 0;
+}
+.ag-courses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+
+  margin: 0 15px 30px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+
+  text-decoration: none;
+  overflow: hidden;
+
+  position: relative;
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #FFF;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+
+  overflow: hidden;
+
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date-box {
+  font-size: 18px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #f9b234;
+
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease
+}
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: #3ecd5e;
+}
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: #e44002;
+}
+.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+  background-color: #952aff;
+}
+.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+  background-color: #cd3e94;
+}
+.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+  background-color: #4c49ea;
+}
+
+
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+}
+
+/*  Certifications About Page End */
+
+
+
+
+/* Honors & Awards Start About Page */
+
+* {
+  transition: all 0.3s ease-out;
+}
+
+.Honors h3 {
+  color: #262626;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #00838d;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(21);
+  }
+}
+
+.card4 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+
+  .go-corner {
+    background-color: #00838d;
+    height: 100%;
+    width: 16px;
+    padding-right: 9px;
+    border-radius: 0;
+    transform: skew(6deg);
+    margin-right: -36px;
+    align-items: start;
+    background-image: linear-gradient(-45deg, orange 1%, yellow 100%);
+  }
+
+  .go-arrow {
+    transform: skew(-6deg);
+    margin-left: -2px;
+    margin-top: 9px;
+    opacity: 0;
+  }
+
+  &:hover {
+    border: 1px solid #cd3d73;
+  }
+
+  h3 {
+    margin-top: 8px;
+  }
+}
+
+.card4:hover {
+  .go-corner {
+    margin-right: -12px;
+  }
+  .go-arrow {
+    opacity: 1;
+  }
+}
+
+/* Honors & Awards End About page */
+
+
+
+
+/* footer animation in index page for git in tucch start */
+.arrow1 {
+  animation: slide1 1s ease-in-out infinite;
+  margin-left: 9px;
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+}
+
+/* footer animation in index page for git in tucch end */
+
+
+/* form control  animation  in contact page start*/
+.group {
+  position: relative;
+ }
+ 
+ .input {
+  color: white;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+ }
+ 
+ .input:focus {
+  outline: none;
+ }
+ 
+ label {
+  color: #ffcc53;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+ 
+ .input:focus ~ label, .input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #ffcc53;
+ }
+ 
+ .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+ }
+ 
+ .bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ffcc53;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+ 
+ .bar:before {
+  left: 50%;
+ }
+ 
+ .bar:after {
+  right: 50%;
+ }
+ 
+ .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width: 50%;
+ }
+ 
+ .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+ }
+ 
+ .input:focus ~ .highlight {
+  animation: inputHighlighter 0.6s ease;
+ }
+ 
+ @keyframes inputHighlighter {
+  from {
+   background: #ffcc53;
+  }
+ 
+  to {
+   width: 0;
+   background: transparent;
+  }
+ }
+/* form control  animation  in contact page end*/
+
+/* form button animation for contact page Start */
+
+/* this only one animation in contact.css file */
+
+/* form button animation for contact page End */
