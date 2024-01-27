@@ -69,7 +69,11 @@ buttonEle.addEventListener( 'click' , () => {
                 Messages : document.getElementById("message").value
             }
         
-            emailjs.send("service_v1sa2lt", "template_224p52l", params).then(alert("email has sent"))
+            emailjs.send("service_v1sa2lt", "template_224p52l", params)
+                .then(
+                    alert("email has sent") , 
+                    window.location.reload()
+                     )
             console.log("Sent");
     
         }else{
